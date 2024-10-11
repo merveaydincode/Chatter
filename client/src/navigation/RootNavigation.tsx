@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 const RootNavigation: React.FC = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Register" >
+      <Stack.Navigator initialRouteName="Register" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Kayıt Ol' }}/>
       </Stack.Navigator>
     </NavigationContainer>
