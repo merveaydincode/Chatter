@@ -30,7 +30,7 @@ const HomeScreen: React.FC = () => {
 
     return (
         <View style={tw`flex-1 bg-black p-4`}>
-            <Text style={tw`text-2xl font-bold text-white mb-4`}>Mesajlar</Text>
+            
 
             <View style={tw`flex-row justify-between mb-4`}>
                 <TouchableOpacity

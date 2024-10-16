@@ -11,14 +11,9 @@ const RootNavigation: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Register" screenOptions={{ headerShown: false }}>
-<<<<<<< HEAD
         <Stack.Screen name="Register" component={RegisterScreen}/>
         <Stack.Screen name="Login" component={LoginScreen}/>
-=======
-        <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Kayıt Ol' }}/>
-        <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Giriş Yap' }}/>
-        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Anasayfa' }}/>
->>>>>>> home
+        <Stack.Screen name="Home" component={HomeScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
