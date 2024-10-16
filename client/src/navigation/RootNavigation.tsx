@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import RegisterScreen from '../screens/RegisterScreen';
 import LoginScreen from '../screens/LoginScreen';
+import HomeScreen from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,7 @@ const RootNavigation: React.FC = () => {
       <Stack.Navigator initialRouteName="Register" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Kayıt Ol' }}/>
         <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Giriş Yap' }}/>
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Anasayfa' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

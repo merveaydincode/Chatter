@@ -23,7 +23,7 @@ const LoginScreen: React.FC = () => {
   }, [route.params]);
 
   const handleLogin = () => {
-    Alert.alert('Giriş Başarılı!', `E-posta: ${email}`);
+    navigation.navigate('Home');
   };
 
   return (
