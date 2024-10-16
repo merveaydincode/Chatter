@@ -10,8 +10,8 @@ const RootNavigation: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Register" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Kayıt Ol' }}/>
-        <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Giriş Yap' }}/>
+        <Stack.Screen name="Register" component={RegisterScreen}/>
+        <Stack.Screen name="Login" component={LoginScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
