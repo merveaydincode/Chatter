@@ -17,8 +17,8 @@ const RegisterScreen: React.FC = () => {
   
   return (
     <View style={tw`flex-1 justify-center items-center p-4 bg-white`}>
-      <Text style={tw`text-2xl font-bold mb-4`}>Kayıt Ol</Text>
-      
+      <Text style={tw`text-2xl font-bold mb-4`}>Sign Up</Text>
+      <View style={tw`flex flex-column items-center mb-4`}>
       <TextInput
         style={tw`border border-gray-300 rounded p-2 w-full mb-4`}
         placeholder="Ad"
@@ -43,6 +43,7 @@ const RegisterScreen: React.FC = () => {
       />
       
       <Button title="Kayıt Ol" onPress={handleRegister} />
+      </View>
     </View>
   );
 };
