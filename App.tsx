@@ -1,11 +1,8 @@
-import { View, Text } from 'react-native';
-import tw from 'twrnc';
+import React from 'react';
+import RootNavigation from './client/src/navigation/RootNavigation';
 
-export default function App() {
-  
-  return (
-    <View style={tw`flex-1 bg-white justify-center items-center`}>
-    <Text style={tw`text-black`}>tailwindddd</Text>
-    </View>
-  );
-}
+const App: React.FC = () => {
+  return <RootNavigation />;
+};
+
+export default App;
