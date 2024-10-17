@@ -36,3 +36,4 @@ yarn-error.*
 
 # Firebase service account key
 firebaseServiceAccountKey.json
+.env
