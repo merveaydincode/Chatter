@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import tw from 'twrnc';
+import { firebase } from '../../../server/firebase';
 
 const RegisterScreen: React.FC = () => {
   const [name, setName] = useState('');
@@ -10,12 +11,16 @@ const RegisterScreen: React.FC = () => {
 
   const navigation = useNavigation();
 
-  const handleRegister = () => {
-    navigation.navigate('Login', { name, email, password });
+  const handleRegister = async () => {
+    try {
+      await firebase.auth().createUserWithEmailAndPassword(email, password);
+      navigation.navigate('Login', { name, email, password });
+    } catch (error) {
+      Alert.alert('Hata', error.message);
+    }
   };
 
   return (
-
     <View style={tw`flex-1 justify-center p-4 bg-black`}>
       <Text style={tw`text-2xl font-bold p-3 text-white`}>Kayıt</Text>
       <View style={tw`bg-indigo-200 p-10 rounded-3xl w-full max-w-md`}>
